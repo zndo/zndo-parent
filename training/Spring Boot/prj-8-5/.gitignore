@@ -1,0 +1,45 @@
+# maven ignore
+/target/
+*.jar
+*.war
+*.zip
+*.tar
+*.tar.gz
+!.mvn/wrapper/maven-wrapper.jar
+
+# eclipse ignore
+.settings/
+.project
+.classpath
+
+# STS ignore
+.apt_generated
+.factorypath
+.springBeans
+
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+
+# NetBeans ignore
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# temp ignore
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+# system ignore
+.DS_Store
+Thumbs.db
+
+# other ignore
