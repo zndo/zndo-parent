@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<include resource="org/springframework/boot/logging/logback/base.xml" />
+
+	<springProfile name="prod">
+		<!-- 滚动日志，日志暂存到指定文件，达到条件时，进行转储 -->
+		<appender name="LogbackRollingFileAppender"
+			class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<File>/tmp/logback.log</File>
+			<!-- 基于时间的滚动策略 -->
+			<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+				<FileNamePattern>/tmp/logback.%d{yyyy-MM-dd}.%i.log
+				</FileNamePattern>
+				<!-- 最大文件大小 -->
+				<maxFileSize>1MB</maxFileSize>
+				<!-- 最大文件历史 -->
+				<maxHistory>3000</maxHistory>
+				<!-- 总量上限 -->
+				<totalSizeCap>20GB</totalSizeCap>
+			</rollingPolicy>
+			<encoder>
+				<Pattern>%d{YYYY-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</Pattern>
+			</encoder>
+		</appender>
+	</springProfile>
+
+	<springProfile name="dev">
+		<root level="INFO">
+			<appender-ref ref="CONSOLE" />
+		</root>
+	</springProfile>
+
+	<springProfile name="prod">
+		<root level="INFO">
+			<appender-ref ref="CONSOLE" />
+			<appender-ref ref="LogbackRollingFileAppender" />
+		</root>
+	</springProfile>
+
+	<logger name="net.zndo.zhuque.controller" level="DEBUG" />
+
+</configuration>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>WebSocket 测试</title>
+    <script src="//cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
+</head>
+<body>
+
+    <ul id = "info-list">
+
+    </ul>
+
+    <script>
+
+        $(function(){
+
+            var wxUrl01 = 'ws://' + window.location.host + '/ws';
+
+            var socket01 = new WebSocket(wxUrl01);
+
+            socket01.onopen = function() {
+                console.log('socket 已连接')
+            }
+
+            socket01.onclose = function() {
+                console.log('socket 已关闭')
+            }
+
+            socket01.onmessage = function(e) {
+                console.log(e.data)
+            }
+
+        })
+
+    </script>
+
+</body>
+</html>

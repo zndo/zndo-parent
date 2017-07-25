@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "zndo.custom.title",
+  "type": "java.lang.String",
+  "description": "自定义标题，元数据定义"
+}]}

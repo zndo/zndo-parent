@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<properties>
+		<Property name="PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%15.15t] %logger{36} @%L : %msg%xEx%n</Property>
+	</properties>
+
+	<appenders>
+		<Console name="CONSOLE" target="system_out">
+			<PatternLayout pattern="${PATTERN}" />
+		</Console>
+	</appenders>
+
+	<loggers>
+		<logger name="logger" level="debug" />
+		<root level="debug">
+			<appenderref ref="CONSOLE" />
+		</root>
+	</loggers>
+
+</configuration>
