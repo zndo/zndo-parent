@@ -12,10 +12,10 @@
 	<description>基于 Spring Boot 的 Web 项目原型（内置容器）</description>
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
+		<groupId>net.zndo</groupId>
+		<artifactId>zndo-parent</artifactId>
 		<version>1.5.4.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath />
 	</parent>
 
 	<properties>
