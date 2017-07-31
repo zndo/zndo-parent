@@ -20,10 +20,10 @@ var Login = function() {
 
             messages: {
                 username: {
-                    required: "Username 是必须输入项。"
+                    required: "[用户名]是必须输入项。"
                 },
                 password: {
-                    required: "Password 是必须输入项。"
+                    required: "[密码]是必须输入项。"
                 }
             },
 
@@ -161,9 +161,12 @@ var Login = function() {
 //                fullname: {
 //                    required: true
 //                },
-	              gender: {
-		              required: true
+	              nickname: {
+	            	  required: true
 	              },
+//	              gender: {
+//		              required: true
+//	              },
 //                email: {
 //                    required: true,
 //                    email: true
@@ -194,6 +197,18 @@ var Login = function() {
             },
 
             messages: { // custom messages for radio buttons and checkboxes
+            	nickname: {
+                    required: "[昵称]是必须输入项。"
+                },
+            	username: {
+                    required: "[用户名]是必须输入项。"
+                },
+            	password: {
+	                required: "[密码]是必须输入项。"
+	            },
+	            rpassword: {
+	            	equalTo: "请再次输入相同的密码。"
+	            },
                 tnc: {
                     required: "请先接受注册协议。"
                 }

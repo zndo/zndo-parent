@@ -1,10 +1,10 @@
 /*
- Navicat Premium Data Transfer
+ Navicat MySQL Data Transfer
 
  Source Server         : localhost
  Source Server Type    : MariaDB
- Source Server Version : 100206
- Source Host           : localhost
+ Source Server Version : 50626
+ Source Host           : localhost:3306
  Source Database       : webapp_admin
 
  Target Server Type    : MariaDB
@@ -131,14 +131,20 @@ COMMIT;
 DROP TABLE IF EXISTS `admin_user`;
 CREATE TABLE `admin_user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'ID',
-  `openid` varchar(64) NOT NULL COMMENT '用户唯一身份识别 ID',
+  `openid` varchar(64) NULL COMMENT '用户唯一身份识别 ID',
   `username` varchar(32) DEFAULT NULL COMMENT '帐号',
-  `password` varchar(32) DEFAULT NULL COMMENT '密码',
+  `password` varchar(128) DEFAULT NULL COMMENT '密码',
   `signin_type` varchar(4) DEFAULT NULL COMMENT '登录类型',
   `nickname` varchar(32) DEFAULT NULL COMMENT '昵称',
   `roles` varchar(255) DEFAULT NULL COMMENT '角色',
-  `avatar` varchar(128) DEFAULT NULL COMMENT '头像',
+  `avatar_url` varchar(128) DEFAULT NULL COMMENT '头像地址',
   `gender` varchar(2) DEFAULT NULL COMMENT '性别',
+  `email` varchar(32) DEFAULT NULL COMMENT '邮箱',
+  `phone` varchar(32) DEFAULT NULL COMMENT '手机号',
+  `status` varchar(32) DEFAULT NULL COMMENT '用户状态',
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP NOT NULL COMMENT '更新时间',
+  `deleted` tinyint(1) NOT NULL DEFAULT 0 NULL COMMENT '是否删除',
   `meta` varchar(64) DEFAULT NULL COMMENT '其他信息',
   `md5` varchar(32) DEFAULT NULL COMMENT '个人信息md5',
   PRIMARY KEY (`id`)

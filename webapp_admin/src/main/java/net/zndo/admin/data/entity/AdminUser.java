@@ -39,7 +39,7 @@ public class AdminUser implements Serializable{
 	private String roles;
 	
 	// 头像
-	private String avatar;
+	private String avatarUri;
 	
 	// 性别
 	private String gender;

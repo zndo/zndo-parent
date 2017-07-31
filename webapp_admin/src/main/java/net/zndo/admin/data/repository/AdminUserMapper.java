@@ -20,13 +20,13 @@ public interface AdminUserMapper {
 	 */
 	@Insert("INSERT INTO admin_user (" + 
 			"	id," + 
-			"	open_id," + 
+			"	openid," + 
 			"	username," + 
 			"	PASSWORD," + 
 			"	signin_type," + 
 			"	nickname," + 
 			"	roles," + 
-			"	avatar," + 
+			"	avatar_url," + 
 			"	gender," + 
 			"	meta," + 
 			"	md5" + 
@@ -34,13 +34,13 @@ public interface AdminUserMapper {
 			"VALUES" + 
 			"	(" + 
 			"		#{id}," + 
-			"		#{open_id}," + 
+			"		#{openId}," + 
 			"		#{username}," + 
 			"		#{password}," + 
-			"		#{signin_type}," + 
+			"		#{signinType}," + 
 			"		#{nickname}," + 
 			"		#{roles}," + 
-			"		#{avatar}," + 
+			"		#{avatarUri}," + 
 			"		#{gender}," + 
 			"		#{meta}," + 
 			"		#{md5})" + 

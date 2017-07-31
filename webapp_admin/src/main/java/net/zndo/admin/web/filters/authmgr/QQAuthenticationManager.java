@@ -61,7 +61,7 @@ public class QQAuthenticationManager implements AuthenticationManager {
 		adminUser.setOpenId(openId);
 		adminUser.setNickname(json.getString("nickname"));
 		adminUser.setGender(json.getString("gender"));
-		adminUser.setAvatar(json.getString("figureurl_qq_2"));
+		adminUser.setAvatarUri(json.getString("figureurl_qq_2"));
 
 		String meta = json.getString("year") + " " + json.getString("province");
 		adminUser.setMeta(meta);

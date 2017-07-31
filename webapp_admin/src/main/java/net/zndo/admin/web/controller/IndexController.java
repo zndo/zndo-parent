@@ -24,14 +24,20 @@ public class IndexController {
 	public String toRoot(){
 			return "page_user_login_1";
 	}
+	
+	// 跳转到注册页
+    @GetMapping("/tosignup")
+    public String toSignup(){
+        return "page_user_login_1";
+    }
 
 	// 注册
     @PostMapping("/signup")
     public String doSignup(AdminUser adminUser){
         if (adminUserService.addAdminUser(adminUser)) {
-            return "redirect:signup?success";
+            return "redirect:tosignup?success";
         }
-        return "redirect:signup?error";
+        return "redirect:tosignup?error";
     }
 	
 	// 跳转到登录页

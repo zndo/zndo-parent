@@ -56,7 +56,7 @@ public class GithubAuthenticationManager implements AuthenticationManager {
 		adminUser.setOpenId(json.getString("id"));
 		adminUser.setNickname(json.getString("login"));
 		adminUser.setGender("男");
-		adminUser.setAvatar(json.getString("avatar_url"));
+		adminUser.setAvatarUri(json.getString("avatar_url"));
 
 		String meta = json.getString("location") + " " + json.getString("name") + " " + json.getString("company");
 		adminUser.setMeta(meta);
