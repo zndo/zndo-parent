@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>net.zndo</groupId>
 		<artifactId>zndo-parent</artifactId>
-		<version>1.5.4.RELEASE</version>
+		<version>1.5.6.RELEASE</version>
 		<relativePath />
 	</parent>
 
