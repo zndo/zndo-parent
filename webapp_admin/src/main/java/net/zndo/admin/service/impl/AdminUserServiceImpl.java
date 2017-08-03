@@ -21,7 +21,6 @@ public class AdminUserServiceImpl implements IAdminUserService {
 
 	@Override
 	public AdminUser updateAdminUser(AdminUser adminUser) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

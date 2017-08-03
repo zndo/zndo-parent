@@ -116,7 +116,6 @@ public class GithubAuthenticationFilter extends AbstractAuthenticationProcessing
 			this.accessToken = accessToken;
 		}
 
-		@SuppressWarnings("unused")
 		private String getScope() {
 			return scope;
 		}
